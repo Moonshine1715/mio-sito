@@ -195,3 +195,32 @@ button:hover {
 html {
     scroll-behavior: smooth;
 }
+h1 {
+    font-size: 56px;
+    letter-spacing: -1px;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.card p {
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    border: none;
+    background: #38bdf8;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+button:hover {
+    background: #0ea5e9;
+}

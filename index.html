@@ -3,9 +3,54 @@
 
 <head>
 <meta charset="UTF-8">
-<title>Home</title>
+<title>Portfolio | Web Developer</title>
 <link rel="stylesheet" href="style.css">
 </head>
+
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="progetti.html">Progetti</a>
+    <a href="contatti.html">Contatti</a>
+</nav>
+
+<div class="hero section">
+    <h1>Web Developer Junior</h1>
+    <p>Creo interfacce web moderne, pulite e responsive</p>
+</div>
+
+<div class="section">
+    <h2>Profilo</h2>
+    <div class="card">
+        <p>
+            Sviluppatore web junior con focus su HTML, CSS e JavaScript.
+            Creo siti web moderni con attenzione a design, usabilità e struttura.
+        </p>
+    </div>
+</div>
+
+<div class="section">
+    <h2>Competenze</h2>
+
+    <div class="grid">
+        <div class="card">HTML5 semantico</div>
+        <div class="card">CSS moderno (Flexbox, Grid)</div>
+        <div class="card">JavaScript base</div>
+        <div class="card">Responsive Design</div>
+        <div class="card">GitHub Pages</div>
+    </div>
+</div>
+
+<div class="section">
+    <h2>Focus</h2>
+    <div class="card">
+        <p>
+            Sviluppo front-end e creazione di interfacce web moderne orientate all’esperienza utente.
+        </p>
+    </div>
+</div>
+
 <script>
 const elements = document.querySelectorAll('.section, .card');
 
@@ -14,7 +59,6 @@ function showOnScroll() {
 
     elements.forEach(el => {
         const top = el.getBoundingClientRect().top;
-
         if (top < triggerBottom) {
             el.classList.add('show');
         }
@@ -24,26 +68,6 @@ function showOnScroll() {
 window.addEventListener('scroll', showOnScroll);
 showOnScroll();
 </script>
-<body>
-
-<nav>
-    <a href="index.html">Home</a>
-    <a href="progetti.html">Progetti</a>
-    <a href="contatti.html">Contatti</a>
-</nav>
-
-<div class="hero">
-    <h1>Creo siti web moderni</h1>
-    <p>Sto costruendo il mio portfolio da sviluppatore web</p>
-    <a class="btn" href="progetti.html">Vedi i progetti</a>
-</div>
-
-<div class="section">
-    <h2>Chi sono</h2>
-    <p style="text-align:center; color:#cbd5e1;">
-        Sono uno sviluppatore in crescita e sto imparando a creare siti moderni e professionali.
-    </p>
-</div>
 
 </body>
 </html>
