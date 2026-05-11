@@ -6,7 +6,24 @@
 <title>Home</title>
 <link rel="stylesheet" href="style.css">
 </head>
+<script>
+const elements = document.querySelectorAll('.section, .card');
 
+function showOnScroll() {
+    const triggerBottom = window.innerHeight * 0.85;
+
+    elements.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+
+        if (top < triggerBottom) {
+            el.classList.add('show');
+        }
+    });
+}
+
+window.addEventListener('scroll', showOnScroll);
+showOnScroll();
+</script>
 <body>
 
 <nav>
@@ -16,9 +33,9 @@
 </nav>
 
 <div class="hero">
-    <h1>Il mio sito startup</h1>
-    <p>Sto costruendo il mio primo progetto web moderno</p>
-    <a class="btn" href="progetti.html">Scopri i progetti</a>
+    <h1>Creo siti web moderni</h1>
+    <p>Sto costruendo il mio portfolio da sviluppatore web</p>
+    <a class="btn" href="progetti.html">Vedi i progetti</a>
 </div>
 
 <div class="section">

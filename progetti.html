@@ -19,22 +19,42 @@
     <h2>I miei progetti</h2>
 
     <div class="grid">
+
         <div class="card">
-            <h3>Sito 1</h3>
-            <p>Primo progetto HTML/CSS.</p>
+            <h3>Portfolio personale</h3>
+            <p>Sito creato con HTML e CSS.</p>
         </div>
 
         <div class="card">
-            <h3>Sito 2</h3>
-            <p>Layout moderno in sviluppo.</p>
+            <h3>Primo sito web</h3>
+            <p>Esperimento di layout moderno.</p>
         </div>
 
         <div class="card">
-            <h3>Sito 3</h3>
-            <p>Portfolio personale.</p>
+            <h3>Landing page</h3>
+            <p>Sito stile startup con design moderno.</p>
         </div>
+
     </div>
 </div>
+
+<script>
+const elements = document.querySelectorAll('.section, .card');
+
+function showOnScroll() {
+    const triggerBottom = window.innerHeight * 0.85;
+
+    elements.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if (top < triggerBottom) {
+            el.classList.add('show');
+        }
+    });
+}
+
+window.addEventListener('scroll', showOnScroll);
+showOnScroll();
+</script>
 
 </body>
 </html>

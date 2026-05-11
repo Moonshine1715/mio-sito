@@ -19,12 +19,34 @@
     <h2>Contattami</h2>
 
     <div class="card">
+        <p>Scrivimi per collaborazioni o domande.</p>
+
         <input type="text" placeholder="Nome">
         <input type="email" placeholder="Email">
         <textarea placeholder="Messaggio"></textarea>
-        <button>Invia</button>
+
+        <button>Invia messaggio</button>
     </div>
 </div>
+
+<script>
+const elements = document.querySelectorAll('.section, .card');
+
+function showOnScroll() {
+    const triggerBottom = window.innerHeight * 0.85;
+
+    elements.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+
+        if (top < triggerBottom) {
+            el.classList.add('show');
+        }
+    });
+}
+
+window.addEventListener('scroll', showOnScroll);
+showOnScroll();
+</script>
 
 </body>
 </html>
